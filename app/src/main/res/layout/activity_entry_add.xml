@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EntryAddActivity">
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Refer Business"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="22dp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textview"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textinputlayout"
+                app:hintTextAppearance="@style/AppTheme.TextFloatLabelAppearance2"
+                android:layout_marginTop="5dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editnames"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Contact Person Name"
+                    android:inputType="textCapWords|textPersonName"
+                    android:textColor="@color/black" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/textinputpass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textinputlayout"
+                app:hintTextAppearance="@style/AppTheme.TextFloatLabelAppearance2"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/black">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editpass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Organization/Business Name"
+                    android:inputType="text" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/textinputlayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textinputpass"
+                app:hintTextAppearance="@style/AppTheme.TextFloatLabelAppearance2"
+                android:layout_marginTop="5dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editcont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Contact Number"
+                    android:inputType="number"
+                    android:textColor="@color/black" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/textinputlayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textinputlayout2"
+                app:hintTextAppearance="@style/AppTheme.TextFloatLabelAppearance2"
+                android:layout_marginTop="5dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editemail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email ID"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/black" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!--<RadioGroup
+                android:id="@+id/radiogroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:weightSum="3"
+                android:layout_below="@+id/textinputlayout3">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Gender"
+                    android:textSize="18dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:textSize="18dp"
+                    android:textColor="@color/black"
+                    android:text="Male" />
+
+                <RadioButton
+                    android:id="@+id/radioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_weight="1"
+                    android:textSize="18dp"
+                    android:text="Female" />
+            </RadioGroup>-->
+
+            <TextView
+                android:id="@+id/textViewcategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Category : "
+                android:textColor="@color/black"
+                android:textSize="19sp"
+                android:layout_below="@+id/textinputlayout3"/>
+            <Spinner
+                android:id="@+id/spinnercat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/spinner_border"
+                android:popupBackground="@color/Peru"
+                android:layout_below="@+id/textinputlayout3"
+                android:layout_toEndOf="@+id/textViewcategory"/>
+
+            <TextView
+                android:id="@+id/textViewsubcategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Sub Category : "
+                android:textColor="@color/black"
+                android:textSize="19sp"
+                android:layout_below="@+id/spinnercat"/>
+
+            <Spinner
+                android:id="@+id/spinnersubcat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/spinner_border"
+                android:popupBackground="@color/Peru"
+                android:layout_below="@+id/spinnercat"
+                android:layout_toEndOf="@+id/textViewsubcategory"/>
+
+            <TextView
+                android:id="@+id/textViewcountry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Country : "
+                android:textColor="@color/black"
+                android:textSize="19sp"
+                android:layout_below="@+id/spinnersubcat"/>
+            <Spinner
+                android:id="@+id/spinnercontry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinnersubcat"
+                android:background="@drawable/spinner_border"
+                android:popupBackground="@color/Peru"
+                android:layout_toEndOf="@+id/textViewcountry"/>
+
+            <TextView
+                android:id="@+id/textViewstate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="State : "
+                android:textColor="@color/black"
+                android:textSize="19sp"
+                android:layout_below="@+id/spinnercontry"/>
+            <Spinner
+                android:id="@+id/spinnerstate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/spinner_border"
+                android:popupBackground="@color/Peru"
+                android:layout_below="@+id/spinnercontry"
+                android:layout_toEndOf="@+id/textViewstate"/>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/textinputrepass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinnerstate"
+                app:hintTextAppearance="@style/AppTheme.TextFloatLabelAppearance2"
+                android:layout_marginTop="5dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editrepass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Remark"
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/black" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!--<android.support.v7.widget.CardView
+                android:id="@+id/cardview"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="#000000"
+                app:cardBackgroundColor="@color/DarkTurquoise"
+                android:layout_below="@+id/textinputrepass"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="19dp"
+                app:cardElevation="6dp">-->
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="add"
+                    android:layout_below="@+id/textinputrepass"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:textAlignment="center"
+                    android:layout_marginBottom="10dp"
+                    android:textStyle="bold"
+                    android:background="@drawable/my_button"
+                    android:textColor="@color/DarkTurquoise"
+                    android:textSize="22dp"/>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ReferBusiness</string>
+
+
+    <string name="about_us">E-mail: sales@reichprinz.com</string>
+    <string name="about_us_details2">Website: www.reichprinz.com</string>
+
+    <string name="about_us_details">
+        \t\t\tFollow the very simple procedure, just add your reference details and you are all set.
+            Earn easily by referring business through this app.\n
+
+        \t\t\t According to the company\'s policy, we will be giving 5% to 15% commission to Business Consultants from the business they provide.
+    </string>
+
+</resources>
